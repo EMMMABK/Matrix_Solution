@@ -69,15 +69,23 @@ class MatrixApp:
             print(f"\nПосле преобразования строки {i + 1}:")
             self.print_matrix()
 
+        # Проверка на бесконечные решения и свободные переменные
         infinite_solutions = False
+        free_vars = []
+        dependent_vars = []
+        
         for i in range(n):
             if all(abs(A[i][j]) < 1e-10 for j in range(m - 1)):
                 if abs(A[i][m - 1]) > 1e-10:
                     print("Система не имеет решений.")
                     return None
                 infinite_solutions = True
+            elif abs(A[i][i]) < 1e-10:
+                free_vars.append(i)  # Запоминаем свободные переменные
+            else:
+                dependent_vars.append(i)  # Запоминаем зависимые переменные
 
-        x = [0] * n
+        x = [0] * (m - 1)
         for i in range(n - 1, -1, -1):
             if abs(A[i][i]) > 1e-10:
                 x[i] = A[i][m - 1] / A[i][i]
@@ -85,15 +93,27 @@ class MatrixApp:
                     A[j][m - 1] -= A[j][i] * x[i]
 
         if infinite_solutions:
-            print("\nСистема имеет бесконечное количество решений. Одно из решений:")
-            for i in range(n):
-                if abs(A[i][i]) < 1e-10:
-                    print(f"x{i + 1} = любое значение (присвоено 0)")
+            print("\nСистема имеет бесконечное количество решений.")
+            # Выводим одно из решений
+            print("Одно из решений:")
+            for i in range(m - 1):
+                if i in free_vars:
+                    print(f"x{i + 1} = свободная переменная")
                 else:
                     print(f"x{i + 1} = {x[i]}")
+
+            # Упрощаем вывод для свободных переменных
+            print("\nНекоторые возможные решения:")
+            for free_var in free_vars:
+                for value in range(-1, 2):  # Задаем диапазон для свободной переменной
+                    temp_solution = x[:]
+                    temp_solution[free_var] = value  # Меняем свободную переменную
+                    for dep_var in dependent_vars:
+                        temp_solution[dep_var] = A[dep_var][m - 1] / A[dep_var][dep_var]
+                    print(f"При x{free_var + 1} = {value}: " + ", ".join(f"x{i + 1} = {temp_solution[i]:.2f}" for i in range(m - 1)))
         else:
             print("\nСистема имеет одно решение:")
-            for i in range(n):
+            for i in range(m - 1):
                 print(f"x{i + 1} = {x[i]}")
 
         return x
