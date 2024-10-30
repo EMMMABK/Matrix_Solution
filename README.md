@@ -1,65 +1,155 @@
+## English
 
-Gaussian Elimination and Matrix Inversion Tool
+### Matrix Operations Program
 
-This Python program solves systems of linear equations using Gaussian elimination and finds the inverse of matrices. It includes an interactive menu to choose between solving equations and finding the inverse of a matrix.
+This program allows you to perform two main operations on matrices: solving systems of linear equations and finding the inverse of a matrix. It uses the Gaussian elimination method for solving equations and a similar approach for finding the inverse.
 
-Features:
+### Features
 
-	1.	Solve a system of linear equations using Gaussian elimination, with support for systems with infinite solutions.
-	2.	Find the inverse of a square matrix, showing each step of the process.
+1. **Solve a System of Linear Equations**: 
+   - Input a matrix of coefficients and the corresponding constants.
+   - The program handles cases with no solution or infinite solutions.
+   - You can provide a specific value for one of the variables.
 
-Prerequisites
+2. **Find the Inverse of a Matrix**: 
+   - Input a square matrix.
+   - The program checks if the matrix is invertible and computes the inverse if possible.
 
-	•	Python 3.x
-	•	NumPy (Install using pip install numpy)
+### Requirements
 
-Installation
+- Python 3.x
+- NumPy library
 
-	1.	Clone the repository or download the script:
+### How to Use
 
-git clone https://github.com/EMMMABK/matrix-tool.git
+1. **Install Dependencies**:
+   Ensure you have Python 3.x installed. You can install the NumPy library using pip:
+   ```bash
+   pip install numpy
+   ```
 
-Or download the algebra_matrix_nd_way.py script directly.
+2. **Run the Program**:
+   Execute the program by running:
+   ```bash
+   python matrix_operations.py
+   ```
 
-	2.	Install NumPy if not already installed:
+3. **Choose an Operation**:
+   - Select an operation (1 to solve equations, 2 to find an inverse, or 3 to exit).
+   
+4. **Input the Necessary Matrices**:
+   Follow the prompts to input the matrices as required.
 
-pip install numpy
+### Example
 
+To solve a system of equations represented by the matrix:
+```
+1 2 | 3
+4 5 | 6
+```
+Input:
+```
+2
+3
+1 2
+4 5
+```
 
+To find the inverse of a matrix:
+```
+1 2
+3 4
+```
+Input:
+```
+2
+1 2
+3 4
+```
 
-Usage
+### License
 
-	1.	Navigate to the folder containing the script:
+This project is open source and available under the MIT License.
 
-cd matrix-tool
+**Note:**
+We have a code editor "VS Code", download it and install Python. (You can Google it)
+By pressing Ctrl Shift + on your keyboard. A terminal will open. Everything shown above must be entered into the terminal.
 
+---
 
-	2.	Run the script:
+## Русский
 
-python algebra_matrix_nd_way.py
+### Программа для работы с матрицами
 
+Эта программа позволяет выполнять две основные операции с матрицами: решать системы линейных уравнений и находить обратную матрицу. Она использует метод Гаусса для решения уравнений и аналогичный подход для нахождения обратной.
 
-	3.	Select an option from the menu:
-	•	Option 1: Solve a system of equations using Gaussian elimination.
-	•	Option 2: Find the inverse of a matrix.
-	4.	Input the matrix data when prompted. Enter each row as a space-separated line of numbers.
+### Возможности
 
-Example:
+1. **Решение системы линейных уравнений**:
+   - Ввод матрицы коэффициентов и соответствующих констант.
+   - Программа обрабатывает случаи без решений или с бесконечным количеством решений.
+   - Вы можете задать конкретное значение для одной из переменных.
 
-If the system asks for a matrix (e.g., 3x3), you can input:
+2. **Нахождение обратной матрицы**:
+   - Ввод квадратной матрицы.
+   - Программа проверяет, является ли матрица обратимой, и вычисляет обратную, если это возможно.
 
-1 2 3
-4 5 6
-7 8 9
+### Требования
 
-For systems of equations, the program will solve using Gaussian elimination. For matrix inversion, it will output the steps and the inverse.
+- Python 3.x
+- Библиотека NumPy
 
-Exiting
+### Как использовать
 
-To exit the program, choose Option 3 from the menu.
+1. **Установите зависимости**:
+   Убедитесь, что у вас установлен Python 3.x. Вы можете установить библиотеку NumPy с помощью pip:
+   ```bash
+   pip install numpy
+   ```
 
-Note:
+2. **Запустите программу**:
+   Выполните программу, запустив:
+   ```bash
+   python matrix_operations.py
+   ```
 
-	•	For Gaussian elimination, you may input the value of a free variable (e.g., x2) when prompted for solutions with infinite possibilities.
-	•	If the matrix is singular (non-invertible), the program will notify you.
+3. **Выберите операцию**:
+   - Выберите операцию (1 для решения уравнений, 2 для нахождения обратной, или 3 для выхода).
 
+4. **Введите необходимые матрицы**:
+   Следуйте подсказкам для ввода матриц.
+
+### Пример
+
+Для решения системы уравнений, представленной матрицей:
+```
+1 2 | 3
+4 5 | 6
+```
+Ввод:
+```
+2
+3
+1 2
+4 5
+```
+
+Для нахождения обратной матрицы:
+```
+1 2
+3 4
+```
+Ввод:
+```
+2
+1 2
+3 4
+```
+
+### Лицензия
+
+Этот проект является открытым исходным кодом и доступен под лицензией MIT.
+
+**Примечание:**
+У нас есть редактор кода "VS Code", скачав его откройте, и установите Python. (Можно в Google)
+Нажав на клавиатуре Ctrl Shift +. Откроется терминал. Все что вышеуказано надо ввести в терминал.
