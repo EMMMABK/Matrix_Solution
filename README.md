@@ -17,7 +17,7 @@ Installation
 
 	1.	Clone the repository or download the script:
 
-git clone https://github.com/yourusername/matrix-tool.git
+git clone https://github.com/EMMMABK/matrix-tool.git
 
 Or download the algebra_matrix_nd_way.py script directly.
 
