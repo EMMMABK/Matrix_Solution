@@ -4,6 +4,11 @@
 
 This program allows you to perform two main operations on matrices: solving systems of linear equations and finding the inverse of a matrix. It uses the Gaussian elimination method for solving equations and a similar approach for finding the inverse.
 
+## Screenshots
+
+![matrix](./assets/matrix.png)
+![matrix](./assets/matrix1.png)
+
 ### Features
 
 1. **Solve a System of Linear Equations**: 
